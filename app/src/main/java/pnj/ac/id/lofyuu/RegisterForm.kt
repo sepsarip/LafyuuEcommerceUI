@@ -8,19 +8,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class LoginForm : AppCompatActivity() {
+class RegisterForm : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_login_form)
-
-        val txtSignup = findViewById<TextView>(R.id.txt_signup)
-        txtSignup.setOnClickListener {
-            val intent = Intent(this, RegisterForm::class.java)
+        setContentView(R.layout.activity_register_form)
+        val txtSignin = findViewById<TextView>(R.id.txt_signin)
+        txtSignin.setOnClickListener {
+            val intent = Intent(this, LoginForm::class.java)
             startActivity(intent)
         }
-
-
     }
-
 }
